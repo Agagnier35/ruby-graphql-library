@@ -7,6 +7,7 @@ module Types
     field :last_name, String
     field :telephone, Integer
     field :email, String
+    field :library_books, [ Types::LibraryBookType ]
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end

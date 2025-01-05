@@ -25,9 +25,27 @@ module Types
     field :libraries, [ Types::LibraryType ], null: false,
       description: "Get all libraries"
     def libraries
-     libraries= Library.all
-     p libraries
-     libraries
+     Library.all
+    end
+
+    field :books, [ Types::BookType ], null: false, description: "Get all books"
+    def books
+     Book.all
+    end
+
+    field :authors, [ Types::AuthorType ], null: false, description: "Get all authors"
+    def authors
+     Author.all
+    end
+
+    field :publishers, [ Types::PublisherType ], null: false, description: "Get all publishers"
+    def publishers
+     Publisher.all
+    end
+
+    field :customers, [ Types::CustomerType ], null: false, description: "Get all customers"
+    def customers
+     Customer.all
     end
   end
 end

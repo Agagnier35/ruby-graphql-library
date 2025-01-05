@@ -7,8 +7,8 @@ module Types
     field :book, Types::BookType
     field :state, String
     field :renting_price, Integer
-    field :rented_by, Types::CustomerType
-    field :rented_since, GraphQL::Types::ISO8601DateTime
+    field :rented_by, Types::CustomerType, null: true
+    field :rented_since, GraphQL::Types::ISO8601DateTime, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
