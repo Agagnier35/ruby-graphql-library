@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
@@ -47,6 +47,6 @@ class GraphqlController < ApplicationController
     logger.error e.message
     logger.error e.backtrace.join("\n")
 
-    render json: { errors: [{ message: e.message, backtrace: e.backtrace }], data: {} }, status: 500
+    render json: { errors: [ { message: e.message, backtrace: e.backtrace } ], data: {} }, status: 500
   end
 end
